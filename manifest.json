@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Selected Tab Reload",
+  "description": "Selected Tab Reload button to reload all selected URL's tabs in the current Chrome window (or all Chrome windows).",
+  "version": "1.0",
+  "icons": {
+    "16": "img/icon_16.png",
+    "48": "img/icon_48.png",
+    "128": "img/icon_128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "img/icon_19.png",
+      "38": "img/icon_38.png"
+    },
+    "default_title": "Selected Tab Reload",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs"
+  ]
+}
