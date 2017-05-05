@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Selected Tab Reload",
-  "description": "Selected Tab Reload button to reload all selected URL's tabs in the current Chrome window (or all Chrome windows).",
-  "version": "1.0",
+  "name": "Auto Reload",
+  "description": "Auto Reload button to reload all selected URL's tabs in the current Chrome window (or all Chrome windows).",
+  "version": "1.1",
   "icons": {
     "16": "img/icon_16.png",
     "48": "img/icon_48.png",
@@ -13,10 +13,16 @@
       "19": "img/icon_19.png",
       "38": "img/icon_38.png"
     },
-    "default_title": "Selected Tab Reload",
+    "default_title": "Auto Reload",
     "default_popup": "popup.html"
   },
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ]
+  },
   "permissions": [
-    "tabs"
+    "tabs",
+    "background"
   ]
 }
