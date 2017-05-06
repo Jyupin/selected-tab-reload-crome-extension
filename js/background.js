@@ -3,6 +3,13 @@ function getSelectedTabIds(vm, callback) {
     chrome.windows.getAll({populate: true}, function (windows) {
         windows.forEach(function (window) {
             window.tabs.forEach(function (tab) {
+                if(!vm.setting.url_list){
+                    var urls = [];
+                    vm.setting.urls.forEach(function (url) {
+                        urls.push(url.tag);
+                    });
+                    vm.setting.url_list = urls;
+                }
                 if (vm.setting.url_list.indexOf(tab.url) > -1) {
                     tabIds.push(tab.id);
                 }
